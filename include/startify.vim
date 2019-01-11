@@ -10,16 +10,20 @@ let g:startify_lists = [
                   \ { 'type': 'commands',  'header': [   'Commands']       },
                   \ ]
 
-let g:startify_bookmarks = [ {'c': '~/.vimrc'}, '~/.zshrc' ]
+let g:startify_bookmarks = [ {'n': "~/workspace/cf-networking-release"}, {'i': "~/workspace/istio-release"}, {'s': "~/workspace/silk-release"} ]
 
 let s:version = split(execute('version'), '\n')[0]
 let s:configversion = strpart(update#localVersion(), 0, 7)
 let s:configupdate = 'auto-update: ' . (update#autoUpdateEnabled() ? 'enabled' : 'disabled')
 
 let g:startify_custom_header = [
-                  \ '                       █▀▀▄ █▀▀ █▀▀█ ▀█░█▀ ░▀░ █▀▄▀█',
-                  \ '                       █░░█ █▀▀ █░░█ ░█▄█░ ▀█▀ █░▀░█',
-                  \ '                       ▀░░▀ ▀▀▀ ▀▀▀▀ ░░▀░░ ▀▀▀ ▀░░░▀',
+                  \ '               _/_/                                        _/                                              _/        _/                      ',
+                  \ '    _/_/_/  _/    _/    _/_/_/      _/_/_/      _/_/    _/_/_/_/  _/      _/      _/    _/_/    _/  _/_/  _/  _/        _/_/_/      _/_/_/',
+                  \ ' _/            _/    _/            _/    _/  _/_/_/_/    _/      _/      _/      _/  _/    _/  _/_/      _/_/      _/  _/    _/  _/    _/',
+                  \ '_/          _/      _/            _/    _/  _/          _/        _/  _/  _/  _/    _/    _/  _/        _/  _/    _/  _/    _/  _/    _/ ',
+                  \ ' _/_/_/  _/_/_/_/    _/_/_/      _/    _/    _/_/_/      _/_/      _/      _/        _/_/    _/        _/    _/  _/  _/    _/    _/_/_/ ',
+                  \ '                                                                                                                                    _/ ',
+                  \ '                                                                                                                               _/_/',
                   \ '              config by Luan Santos <https://github.com/luan>',
                   \ printf('   Neovim Version: %-15s %35s', s:version, '(run :version for more details)'),
                   \ printf('   Config Version: %-15s %35s', s:configversion, printf('(%s)', s:configupdate)),
